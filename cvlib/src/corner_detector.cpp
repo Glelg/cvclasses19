@@ -25,7 +25,6 @@ void corner_detector_fast::detect(cv::InputArray image, CV_OUT std::vector<cv::K
     cv::Mat img;
     img_mat.copyTo(img);
     cv::blur(img, img, cv::Size(5, 5));
-    cv::blur(img_mat, img_mat, cv::Size(5, 5));
     for (int i = 3; i < image.rows() - 3; i++)
         for (int j = 3; j < image.cols() - 3; j++)
         {
